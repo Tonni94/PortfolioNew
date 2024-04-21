@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="mobilemenu.css" rel="stylesheet">
+<style>
+h1 {
+  --primary: #FEC158;
+  font-family: 'Bungee', sans-serif;
+}
+
+h2 {
+  font-family: 'Bungee', sans-serif;
+}
+
+p {
+    font-family: 'Montserrat';
+  }
+
+a {
+ font-family: 'Montserrat';
+}
+
+  #ahover {
+  position: relative;
+}
+
+  #ahover::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #FEC158;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+#ahover:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url('fonts/Montserrat-Regular.ttf');
+}
+
+  @font-face {
+  font-family: Bungee;
+  src: url('fonts/Bungee-Regular.ttf');
+}
+
+#scroll-text {
+  filter: drop-shadow(0 0 0.35rem var(--primary));
+  color: transparent;
+  font-size: 100px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #FEC158;
+  text-transform: uppercase;
+  font-family: 'Bungee', sans-serif;
+}
+
+  :root {
+  --primary: #FEC158;
+}
+
+  #scroll-container {
+  overflow: hidden;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#scroll-text {
+  /* animation properties */
+  transform: translateX(0); /* Initial state: start from the center */
+  white-space: nowrap; /* Prevent text from wrapping */
+  animation: my-animation 80s linear infinite; /* Updated animation properties */
+  filter: drop-shadow(0 0 0.35rem var(--primary));
+}
+
+/* Keyframes animation */
+@keyframes my-animation {
+  0% {
+    transform: translateX(0%); /* Start from the center */
+  }
+  100% {
+    transform: translateX(-100%); /* End at the left edge of the container */
+  }
+}
+
+.footerFont {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footerList li:nth-child(-n+2) {
+    margin-bottom: 0.5rem; /* Adjust this value as needed */
+}
+</style>
+</head>
+
+<body class="bg-[#090e17]">
+  <header class="relative bg-transparent z-30 px-4">
+    <div class="container mx-auto max-w-[1400px]">
+        <nav class="bg-transparent max-w-[1400px]">
+            <ul class="container navigation flex flex-wrap justify-between items-center text-center relative py-4">
+                <li class="logo h-full w-34">
+                    <a href="index.html">
+                        <img src="img/logo.png" class="w-16 h-16" alt="Logo">
+                    </a>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="check">
+                    <label for="check" class="open-menu z-200">
+                        <i class="fa-solid fa-bars text-white hamburger-icon text-3xl"></i>
+                    </label>
+                    <label for="check" class="close-menu z-200">
+                        <i class="fa-regular fa-circle-xmark text-white close-icon text-3xl"></i>
+                    </label>
+                    <!-- Mobile menu items -->
+                    <ul class="menu flex justify-center items-center text-center mb-1">
+                        <li class="text-lg font-semibold text-white mr-8 tracking-wide"><a href="index.html" id="ahover">Home</a></li>
+                        <li class="text-lg font-semibold text-white mr-8 tracking-wide"><a href="work.html" id="ahover">Work</a></li>
+                        <li class="text-lg font-semibold text-white mr-8 tracking-wide"><a href="contact.html" id="ahover">Contact</a></li>
+                        <li class="text-lg font-semibold text-white tracking-wide"><a href="about.html" id="ahover">About</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    
+    
+    <div class="relative flex items-top justify-center min-h-screen sm:items-center sm:pt-0 px-4">
+        <div class="flex justify-center align-center items-center mx-auto md:h-screen">
+            <div id="scroll-container" class="w-full overflow-hidden absolute top-0 left-0 z-0">
+                <div id="scroll-text">Lets connect. &nbsp;&nbsp;&nbsp; Lets connect. &nbsp;&nbsp;&nbsp; Lets connect. &nbsp;&nbsp;&nbsp; Lets connect. &nbsp;&nbsp;&nbsp; Lets connect. &nbsp;&nbsp;&nbsp; Lets connect. &nbsp;&nbsp;&nbsp; Lets connect. &nbsp;&nbsp;&nbsp; Lets connect. &nbsp;&nbsp;&nbsp; Lets connect. &nbsp;&nbsp;&nbsp; Lets connect. &nbsp;&nbsp;&nbsp; Lets connect.</div>
+            </div>
+            <div class="overflow-hidden relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-2 rounded-lg bg-[#21262E]">
+                    <div class="p-6 sm:mr-2 bg-cover bg-left md:bg-center rounded-lg h-full w-full"
+                         style="background-image: url('img/contactimg.png');">
+                        <h1 class="text-4xl sm:text-5xl text-[#090e17]">
+                            Get in touch
+                        </h1>
+                        <p class="text-normal text-lg sm:text-2xl font-bold text-[#21262E] dark:text-gray-400 mt-2">
+                            Fill in the form to reach out to me.
+                        </p>
+                    </div>
+    
+                    <form action="https://api.web3forms.com/submit" method="POST" class="p-6 flex flex-col justify-center">
+                        <div class="flex flex-col">
+                            <label for="name" class="hidden">Full Name</label>
+                            <input type="text" name="name" id="name" placeholder="Your Name" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none" required>
+                            <input type="hidden" name="access_key" value="4921111c-1cb9-40f8-ae89-afca21c2d64f">
+                        </div>
+    
+                        <div class="flex flex-col mt-4">
+                            <label for="email" class="hidden">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Email" class="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none" required>
+                        </div>
+    
+                        <div class="flex flex-col mt-4">
+                            <textarea rows="7" name="message" id="message" placeholder="Your message" class="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-3 mt-2 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" required></textarea>
+                          </div>
+                        <button type="submit" class="md:w-32 hover:bg-white bg-[#FEC158] text-[#090e17] font-bold py-3 px-6 rounded-lg mt-3 transition ease-in-out duration-300 mt-6">
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--FOOTER-->
+<footer class="relative bottom-0 bg-[#21262E] py-8 px-4"> 
+    <div class="container mx-auto text-white">
+        <div class="flex flex-col md:flex-row items-start justify-between text-left max-w-[1400px]">
+            <!-- Logo -->
+            <div class="flex flex-col md:flex-row items-start">
+              <img src="img/logo.png" alt="Logo" class="h-20 w-20 mr-20 mb-5">
+            
+
+            <!--Contact-->
+            <div class="flex flex-col mb-10 md:mb-0">
+              <h2 class="text-white mb-1">Have any questions?</h2>
+              <p class="text-white mb-2">Feel free to contact me anytime</p>
+              <a href="contact.html" class="rounded-full py-3 px-6 font-extrabold bg-[#FEC158] text-[#21262E] text-center w-40 hover:bg-white">
+                Contact
+              </a>
+          </div>
+        </div>
+            <!-- Links and Socials list -->
+            <div class="flex w-auto justify-between">
+                <div class="links">
+                    <h2 class="block tracking-wider font-extralight text-lg mb-3 pr-28 md:pr-32 lg:pr-44 xl:pr-52 md:text-center">links</h2>
+                    <ul class="footerList">
+                      <li>
+                        <a id="ahover" href="index.html">Home</a>
+                    </li>
+                            <li>
+                                <a id="ahover" href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a id="ahover" href="work.html">Work</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="socials">
+                    <h2 class="block tracking-wider font-extralight text-lg mb-3">socials</h2>
+                    <ul class="footerList">
+                            <li>
+                                <a id="ahover" href="https://www.linkedin.com/in/toni-hyv%C3%B6nen-bb6393256/">LinkedIn</a>
+                            </li>
+                            <li>
+                                <a id="ahover" href="https://github.com/Tonni94">Github</a>
+                            </li>
+                            <li>
+                                <a id="ahover" href="https://www.facebook.com/toni.hyvonen">Facebook</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        <hr class="my-6 border-blueGray-300">
+  
+        <div class="footerFont flex flex-col items-center md:justify-between justify-center">
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+              <div class="text-white text-sm">Copyright &#169; <span id="get-current-year">2024</span>
+                  <a href="about.html" class="text-white hover:text-[#FEC158] font-montserrat">Toni Hyvönen</a>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <!--FOOTER END-->
+
+
+</body>
+</html>

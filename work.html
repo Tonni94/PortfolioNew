@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link href="mobilemenu.css" rel="stylesheet">
+<style>
+  h1 {
+    font-family: 'Bungee', sans-serif;
+  }
+
+  h2 {
+    font-family: 'Bungee', sans-serif;
+  }
+
+  h3 {
+    font-family: 'Bungee', sans-serif;
+  }
+
+  p {
+    font-family: 'Montserrat';
+  }
+
+  a {
+    font-family: 'Montserrat';
+  }
+
+  #ahover {
+  position: relative;
+}
+
+  #ahover::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #FEC158;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+#ahover:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+  @font-face {
+  font-family: Bungee;
+  src: url('fonts/Bungee-Regular.ttf');
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url('fonts/Montserrat-Regular.ttf');
+}
+
+
+@keyframes slide-up {
+  0% {
+  transform: translateY(100%);
+  }
+  100% {
+  transform: translateY(0);
+  }
+}
+
+  .slide-up-animation {
+    animation: slide-up 1s ease forwards;
+  }
+
+  /* Additional style to position text initially at the bottom */
+  .initial-hidden {
+    transform: translateY(100%);
+  }
+
+/*SOCIAL MEDIA POSTERS*/
+.image-container {
+    transition: transform 0.3s ease-in-out;
+  }
+
+.image-container.enlarged {
+  transform: scale(1.08);
+}
+
+/*LOGO SLIDER*/
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-2000%);
+  }
+}
+
+.logos {
+  overflow: hidden;
+  padding: 60px 0;
+  white-space: nowrap;
+  position: relative;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+}
+
+.logos:after {
+  right: 0;
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  animation: 300s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 150px;
+  margin: 0 40px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); 
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.button-container p, .button-container a {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeInAnimation {
+  animation: fadeInAnimation ease 1s;
+  animation-fill-mode: forwards; /* Ensure the final state persists after the animation ends */
+}
+
+.footerFont {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footerList li:nth-child(-n+2) {
+    margin-bottom: 0.5rem;
+}
+</style>
+</head>
+
+<body class="bg-[#090e17]">
+  <header class="relative bg-transparent z-30 px-4">
+    <div class="container mx-auto max-w-[1400px]">
+        <nav class="bg-transparent max-w-[1400px]">
+            <ul class="container navigation flex flex-wrap justify-between items-center text-center relative py-4">
+                <li class="logo h-full w-34">
+                    <a href="index.html">
+                        <img src="img/logo.png" class="w-16 h-16" alt="Logo">
+                    </a>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="check">
+                    <label for="check" class="open-menu z-200">
+                        <i class="fa-solid fa-bars text-white hamburger-icon text-3xl"></i>
+                    </label>
+                    <label for="check" class="close-menu z-200">
+                        <i class="fa-regular fa-circle-xmark text-white close-icon text-3xl"></i>
+                    </label>
+                    <!-- Mobile menu items -->
+                    <ul class="menu flex justify-center items-center text-center mb-1">
+                        <li class="text-lg font-semibold text-white mr-8 tracking-wide"><a href="index.html" id="ahover">Home</a></li>
+                        <li class="text-lg font-semibold text-white mr-8 tracking-wide"><a href="work.html" id="ahover">Work</a></li>
+                        <li class="text-lg font-semibold text-white mr-8 tracking-wide"><a href="contact.html" id="ahover">Contact</a></li>
+                        <li class="text-lg font-semibold text-white tracking-wide"><a href="about.html" id="ahover">About</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!--Banneri alkaa-->
+  <section class="bg-cover bg-center h-screen flex justify-center items-center -mt-28" style="background-image: url('img/workbanner.jpg');">
+    <div class="bg-black bg-opacity-50 w-full h-full flex justify-center items-center">
+      <div class="text-center text-white slide-up-animation px-4 md:px-6">
+        <h1 class="mb-4 text-6xl sm:text-6xl md:text-7xl lg:text-8xl">Discover My Work</h1>
+        <p class="text-xl">Take a journey through my projects</p>
+      </div>
+    </div>
+  </section>
+
+<!--Web design section-->  
+<section class="web-design px-4 my-20 md:px-6">
+  <div class="flex text-center justify-center mx-auto max-w-[1300px] mb-20 text-white text-5xl work-animation">
+    <h2 class="z-10 text-3xl sm:text-4xl lg:text-5xl">Web development</h2>
+  </div>
+
+  <div class="text-left mx-auto max-w-[1300px] mb-10 text-white work-animation">
+    <div class="flex justify-center w-full max-w-[650px] mb-10 lg:mb-0 text-left flex flex-col">
+      <h2 class="flex flex-col text-white text-xl md:text-2xl lg:text-3xl mb-1">My projects</h2>
+      <hr class="px white w-16 mb-4">
+      <p class="text-white z-20">Welcome to my portfolio! Explore my passion projects, blending creativity and skill. Each piece reflects growth and dedication. Whether seeking inspiration or intrigued by creativity, I'm here to engage with you. Contact me for discussion, collaboration, or inquiries.</p>
+    </div>
+  </div>
+
+  <div class="bg-[#FEC158] max-w-[1300px] lg:max-w-[1720px] justify-center items-center mx-auto lg:rounded-l-2xl rounded-l-none lg:mb-0 lg:-mr-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 max-w-[1300px] lg:max-w-[1600px] gap-6">
+      <!-- Left section with buttons -->
+      <div class="flex flex-col w-full justify-center text-left px-4 md:px-5 lg:px-5 xl:px-10 py-5">
+        <div id="projectButtons">
+          <div id="project1" class="project-container">
+            <button class="flex items-center w-full mb-4 text-[#090e17] text-left" onclick="changeImage(0)">
+              <div class="button-container">
+                <h2 class="text-2xl mb-1">Syntesia</h2>
+                <p class="font-semibold mb-4">Total brand overhaul with fresh visuals, logo and design. Developed with CSS and Wordpress.</p>
+                <a href="https://www.syntesia.se/sv/" class="block font-semibold rounded-full bg-[#21262E] hover:bg-white hover:text-[#21262E] text-white py-3 px-9 text-center w-48">Take a look</a>
+                <hr class="px w-32 md:w-64 mt-3">
+              </div>
+            </button>
+          </div>
+          <div id="project2" class="project-container">
+            <button class="flex items-center w-full mb-4 text-[#090e17] text-left" onclick="changeImage(1)">
+              <div class="button-container">
+                <h2 class="text-2xl mb-1">Backwoods</h2>
+                <p class="font-semibold" style="display: none;">The practice project was designed in Figma and developed using WordPress and CSS, showcasing a blend of design and technical skills.</p>
+                <hr class="px w-32 md:w-64 mt-3">
+              </div>
+            </button>
+          </div>
+          <div id="project3" class="project-container">
+            <button class="flex items-center w-full mb-4 text-[#090e17] text-left" onclick="changeImage(2)">
+              <div class="button-container">
+                <h2 class="text-2xl mb-1">Cocktail Corner</h2>
+                <p class="font-semibold" style="display: none;">The practice project was built with a combination of HTML, PHP, Tailwind CSS, CSS, JavaScript, and MySQL, offering a comprehensive approach that merges functionality with visual appeal.</p>
+                <hr class="px w-32 md:w-64 mt-3">
+              </div>
+            </button>
+          </div>
+          <div id="project4" class="project-container">
+            <button class="flex items-center w-full mb-4 text-[#090e17] text-left" onclick="changeImage(3)">
+              <div class="button-container">
+                <h2 class="text-2xl mb-1">Cheatcode</h2>
+                <p class="font-semibold mb-4" style="display: none;">The project, using HTML, JavaScript, and CSS, featured animations via LottieLab, elevating its visual charm and interaction.</p>
+                <a href="https://tonni94.github.io/CheatCode/frontpage.html" class="font-semibold rounded-full bg-[#21262E] hover:bg-white hover:text-[#21262E] text-white py-3 px-9 text-center w-48">Take a look</a>
+                <hr class="px w-32 md:w-64 mt-3">
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right section with image -->
+      <div class="flex w-full justify-center items-center">
+        <img id="mainImage" src="img/syntesiamockup.png" alt="Main Image" class="w-full justify-center items-center border-4 rounded-2xl white lg:mr-4" style="width: 110%; height: 110%; background-color: #21262E;">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!--DESIGN SECTION-->
+<section class="graphic-design px-4 my-20 md:px-6">
+  <div class="flex text-center justify-center mx-auto max-w-[1300px] mb-20 text-white text-5xl work-animation">
+    <h2 class="z-10 text-3xl sm:text-4xl lg:text-5xl">Graphic design</h2>
+</div>
+  <!--GRAPHIC DESIGN SECTION-->
+  <div class="text-left mx-auto max-w-[1300px] mb-10 text-white work-animation">
+      <div class="flex justify-center w-full max-w-[650px] mb-10 lg:mb-0 text-left flex flex-col">
+          <h2 class="flex flex-col text-white text-xl md:text-2xl lg:text-3xl mb-1">Social media</h2>
+          <hr class="px white w-16 mb-4">
+          <p class="text-white">Are you seeking captivating social media ads, striking artwork, or eye-catching posters? Look no further! My services are dedicated to delivering top-tier quality work tailored to your needs. Let's elevate your brand with exceptional visuals that leave a lasting impression.</p>
+    </div>
+  </div>
+    <div class="graphicCards grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center items-center max-w-[1300px] mx-auto mb-20">
+      <div class="image-container bg-[#21262E] p-6 rounded-2xl"><img src="img/poster1.png" class="rounded-xl clickable-img" alt=""></div>
+        <div class="image-container bg-[#21262E] p-6 rounded-2xl"><img src="img/poster2.png" class="rounded-xl clickable-img" alt=""></div>
+          <div class="image-container bg-[#21262E] p-6 rounded-2xl"><img src="img/poster3.png" class="rounded-xl clickable-img" alt=""></div>
+      </div>
+
+      <!--LOGO SECTION-->
+      <div class="grid grid-cols-1 mx-auto max-w-[1300px] gap-x-6">
+        <div class="flex justify-center w-full max-w-[650px] mb-10 text-left flex flex-col">
+          <h2 class="text-white text-xl md:text-2xl lg:text-3xl mb-1">Logos</h2>
+          <hr class="px white w-16 mb-8">
+            <p class="text-white">Creating captivating logos that not only grab attention but also linger in customers' minds? Consider it done. My services encompass logo designing and creation, ensuring your brand stands out with a memorable visual identity.</p>
+          </div>  
+    
+          <div class="logos">
+            <div class="logos-slide flex">
+              <img src="img/digihouse.png" />
+              <img src="img/logo.pngg" />
+              <img src="img/digihouse.png" />
+              <img src="img/logo.png" />
+              <img src="img/digihouse.png" />
+              <img src="img/logo.png" />
+              <img src="img/digihouse.png" />
+              <img src="img/logo.png" />
+              <img src="img/digihouse.png" />
+              <img src="img/logo.png" />
+              <img src="img/digihouse.png" />
+              <img src="img/logo.png" />
+              <img src="img/comingsoon.png" />
+              <img src="img/comingsoon.png" />
+              <img src="img/comingsoon.png" />
+              <img src="img/comingsoon.png" />
+            </div>
+          </div>
+
+      </div>
+</section>
+
+
+<!--SCROLL NAV-->
+<div id="scrollNav" class="relative pattern hidden">
+  <div class="z-20 flex flex-row justify-around gap-4 border-t border-gray-200 bg-[#3A3E45] p-2.5 shadow-lg backdrop-blur-lg fixed top-14 -translate-y-1/2 left-1/2 transform -translate-x-1/2 min-h-[auto] min-w-[64px] rounded-lg border">
+
+      <a href="work.html" class="flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 text-white hover:bg-[#6B6E73]">
+          <!-- Projects -->
+          <i class="fa-solid fa-desktop"></i>
+          <small class="text-center text-xs font-medium"> Work </small>
+      </a>
+
+      <a href="contact.html" class="flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 text-white hover:bg-[#6B6E73]">
+          <!-- Contact -->
+          <i class="fa-regular fa-envelope"></i>
+          <small class="text-center text-xs font-medium"> Contact </small>
+      </a>
+
+      <a href="about.html" class="flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 text-white hover:bg-[#6B6E73]">
+          <!-- About -->
+          <i class="fa-regular fa-user"></i>
+          <small class="text-center text-xs font-medium"> About </small>
+      </a>
+
+      <!-- Vertical line -->
+      <div class="vertical-line w-px height-full bg-gray-500"></div>
+
+      <a href="index.html" class="flex h-16 w-16 flex-col items-center justify-center gap-1 rounded-md text-white hover:bg-[#6B6E73]">
+          <!-- Home -->
+          <i class="fa-solid fa-house"></i>
+          <small class="text-xs font-medium">Home</small>
+      </a>
+  </div>
+</div>
+
+<!--FOOTER-->
+<footer class="relative bottom-0 bg-[#21262E] py-8 px-4"> 
+    <div class="container mx-auto text-white">
+        <div class="flex flex-col md:flex-row items-start justify-between text-left max-w-[1400px]">
+            <!-- Logo -->
+            <div class="flex flex-col md:flex-row items-start">
+              <img src="img/logo.png" alt="Logo" class="h-20 w-20 mr-20 mb-5">
+            
+
+            <!--Contact-->
+            <div class="flex flex-col mb-10 md:mb-0">
+              <h2 class="text-white mb-1">Have any questions?</h2>
+              <p class="text-white mb-2">Feel free to contact me anytime</p>
+              <a href="contact.html" class="rounded-full py-3 px-6 font-extrabold bg-[#FEC158] text-[#21262E] text-center w-40 hover:bg-white">
+                Contact
+              </a>
+          </div>
+        </div>
+            <!-- Links and Socials list -->
+            <div class="flex w-auto justify-between">
+                <div class="links">
+                    <h2 class="block tracking-wider font-extralight text-lg mb-3 pr-28 md:pr-32 lg:pr-44 xl:pr-52 md:text-center">links</h2>
+                    <ul class="footerList">
+                      <li>
+                        <a id="ahover" href="index.html">Home</a>
+                    </li>
+                            <li>
+                                <a id="ahover" href="about.html">About</a>
+                            </li>
+                            <li>
+                                <a id="ahover" href="work.html">Work</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="socials">
+                    <h2 class="block tracking-wider font-extralight text-lg mb-3">socials</h2>
+                    <ul class="footerList">
+                            <li>
+                                <a id="ahover" href="https://www.linkedin.com/in/toni-hyv%C3%B6nen-bb6393256/">LinkedIn</a>
+                            </li>
+                            <li>
+                                <a id="ahover" href="https://github.com/Tonni94">Github</a>
+                            </li>
+                            <li>
+                                <a id="ahover" href="https://www.facebook.com/toni.hyvonen">Facebook</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        <hr class="my-6 border-blueGray-300">
+  
+        <div class="footerFont flex flex-col items-center md:justify-between justify-center">
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+              <div class="text-white text-sm">Copyright &#169; <span id="get-current-year">2024</span>
+                  <a href="about.html" class="text-white hover:text-[#FEC158] font-montserrat">Toni Hyvönen</a>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <!--FOOTER END-->
+
+<!--Scroll nav-->
+<script>
+    window.addEventListener('scroll', function() {
+    var scrollNav = document.getElementById('scrollNav');
+    if (window.scrollY > 100) { // Change 100 to your desired scroll position
+        scrollNav.classList.remove('hidden');
+    } else {
+        scrollNav.classList.add('hidden');
+    }
+});
+</script>
+
+<!--PROJECTS SECTION IMAGE CHANGE AND 'p' 'a' DISPLAY-->
+<script>
+  // Preload images
+  const images = [
+    "img/syntesiamockup.png",
+    "img/backwoodsmockup.png",
+    "img/cocktailcornermockup.png",
+    "img/cheatcodemockup.png"
+  ];
+
+  images.forEach(image => {
+    const img = new Image();
+    img.src = image;
+  });
+
+  function changeImage(imageNumber) {
+    const mainImage = document.getElementById('mainImage');
+
+    // Fade out the current image
+    mainImage.style.opacity = 0;
+
+    // After a short delay, change the image source and fade in the new image
+    setTimeout(function() {
+      mainImage.src = images[imageNumber];
+
+      // Trigger reflow to ensure the browser updates the DOM before applying the animation
+      void mainImage.offsetWidth;
+
+      // Add the fadeInAnimation class to the mainImage
+      mainImage.classList.add('fadeInAnimation');
+
+      // Fade in the new image
+      mainImage.style.opacity = 1;
+
+      // Hide all <p> and <a> elements
+      document.querySelectorAll('.project-container p, .project-container a').forEach(function(element) {
+        element.style.display = 'none';
+      });
+
+      // Show the <p> element for the clicked button
+      const pElement = document.querySelector(`#project${imageNumber + 1} p`);
+      if (pElement) {
+        pElement.style.display = 'block';
+      }
+
+      // Show the <a> element for the clicked button
+      const aElement = document.querySelector(`#project${imageNumber + 1} a`);
+      if (aElement) {
+        aElement.style.display = 'block';
+      }
+    }, 100); // Adjust the delay to match the transition duration
+
+    // Remove the fadeInAnimation class after the animation ends
+    mainImage.addEventListener('animationend', function() {
+      mainImage.classList.remove('fadeInAnimation');
+    });
+  }
+
+  // Initially hide all <a> elements except the first one
+  document.querySelectorAll('.project-container a').forEach(function(element, index) {
+    if (index !== 0) {
+      element.style.display = 'none';
+    }
+  });
+</script>
+
+<!--SOCIAL MEDIA POSTERS-->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const imageContainers = document.querySelectorAll('.image-container');
+
+    imageContainers.forEach(function (container) {
+      container.addEventListener('click', function () {
+        // Reset all containers to default size
+        imageContainers.forEach(function (container) {
+          container.classList.remove('enlarged');
+        });
+
+        // Enlarge the clicked container
+        this.classList.add('enlarged');
+      });
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="mobilemenu.css" rel="stylesheet">
+
+<style>
+h1 {
+    font-family: 'Bungee', sans-serif;
+}
+
+  h2 {
+    font-family: 'Bungee', sans-serif;
+  }
+
+  a {
+    font-family: 'Montserrat';
+  }
+
+  p {
+    font-family: 'Montserrat';
+  }
+
+
+  #ahover {
+  position: relative;
+}
+
+  #ahover::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #FEC158;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+#ahover:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+  @font-face {
+  font-family: Bungee;
+  src: url('fonts/Bungee-Regular.ttf');
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url('fonts/Montserrat-Regular.ttf');
+}
+
+        
+ #scroll-text {
+    filter: drop-shadow(0 0 0.35rem var(--primary));
+    color: transparent;
+    font-size: 100px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FEC158;
+    text-transform: uppercase;
+    font-family: 'Bungee', sans-serif;
+}
+        
+:root {
+--primary: #FEC158;
+}
+        
+#scroll-container {
+    overflow: hidden;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+        
+#scroll-text {
+    /* animation properties */
+    transform: translateX(0); /* Initial state: start from the center */
+    white-space: nowrap; /* Prevent text from wrapping */
+    animation: my-animation 80s linear infinite; /* Updated animation properties */
+    filter: drop-shadow(0 0 0.35rem var(--primary));
+}
+        
+/* Keyframes animation */
+    @keyframes my-animation {
+    0% {
+    transform: translateX(0%); /* Start from the center */
+     }
+    100% {
+    transform: translateX(-100%); /* End at the left edge of the container */
+    }
+}
+
+#passionate-about {
+    color: #FEC158;
+    text-transform: uppercase;
+}
+
+@media (max-width: 450px) {
+    h2 {
+    display: block;
+    }
+
+ #passionate-about {
+    display: block;
+    }
+}
+
+.footerFont {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footerList li:not(:last-child) {
+    padding-bottom: 0.5rem; /* Adjust this value as needed */
+}
+</style>
+</head>
+
+<body class="bg-[#090e17]">
+    <header class="relative bg-transparent z-30 px-4">
+        <div class="container mx-auto max-w-[1400px]">
+            <nav class="bg-transparent max-w-[1400px]">
+                <ul class="container navigation flex flex-wrap justify-between items-center text-center relative py-4">
+                    <li class="logo h-full w-34">
+                        <a href="index.html">
+                            <img src="img/logo.png" class="w-16 h-16" alt="Logo">
+                        </a>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="check">
+                        <label for="check" class="open-menu z-200">
+                            <i class="fa-solid fa-bars text-white hamburger-icon text-3xl"></i>
+                        </label>
+                        <label for="check" class="close-menu z-200">
+                            <i class="fa-regular fa-circle-xmark text-white close-icon text-3xl"></i>
+                        </label>
+                        <!-- Mobile menu items -->
+                        <ul class="menu flex justify-center items-center text-center mb-1">
+                            <li class="text-lg font-semibold text-white mr-8 tracking-wide"><a href="index.html" id="ahover">Home</a></li>
+                            <li class="text-lg font-semibold text-white mr-8 tracking-wide"><a href="work.html" id="ahover">Work</a></li>
+                            <li class="text-lg font-semibold text-white mr-8 tracking-wide"><a href="contact.html" id="ahover">Contact</a></li>
+                            <li class="text-lg font-semibold text-white tracking-wide"><a href="about.html" id="ahover">About</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+<!--MAIN CONTENT-->
+<div class="relative flex justify-center sm:items-center mx-auto px-4 min-h-screen mb-20 mt-10 sm:pt-0 md:mb-12">
+    <div id="scroll-container" class="w-full overflow-hidden absolute top-0 left-0 z-0">
+        <div id="scroll-text">Who is Toni? &nbsp;&nbsp;&nbsp; Who is Toni? &nbsp;&nbsp;&nbsp; Who is Toni? &nbsp;&nbsp;&nbsp; Who is Toni? &nbsp;&nbsp;&nbsp; Who is Toni? &nbsp;&nbsp;&nbsp; Who is Toni? &nbsp;&nbsp;&nbsp; Who is Toni? &nbsp;&nbsp;&nbsp; Who is Toni? &nbsp;&nbsp;&nbsp; Who is Toni? &nbsp;&nbsp;&nbsp; Who is Toni? &nbsp;&nbsp;&nbsp; Who is Toni?</div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+    <!-- Right Column (Text) -->
+    <div class="flex flex-col justify-center w-full max-w-[700px] z-10 -mr-9">
+        <div class="relative">
+            <div class="bg-[#21262E] bg-opacity-95 rounded-xl pt-4 pb-12 md:py-5 lg:pr-10 lg:py-6 px-4 xl:p-10">
+                <h1 class="text-3xl text-white mb-5 xl:mb-8 xl:text-5xl">Hi, my name is Toni.</h1>
+                <h3 class="text-lg font-semibold text-white xl:text-xl">I have always enjoyed seeing the result of the work I have done with my hands. In front-end and web development, I get that same feeling and see the work I've done in a tangible way.</h3>
+                <hr class="px my-2 lg:my-5 w-24 sm:w-36">
+                <p class="text-md text-white">Before diving into web development, I spent a good eight years hammering away as a carpenter. But you know how it goes as you get older, right? Started feeling like maybe banging nails wasn't my true calling after all. Long story short, I decided to switch gears and chase after my dream job in web development.</p>
+                <hr class="px my-2 lg:my-5 w-24 sm:w-36">
+                <h2 class="text-white text-lg uppercase xl:text-2xl">Passionate about
+                    <div id="passionate-about" class="inline-block"></div>
+                </h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- Left Column (Image) -->
+    <div class="flex justify-center -mt-9 md:-mt-3 lg:mt-0 lg:-ml-9 items-center align-center ">
+        <img src="img/about.png" alt="Image" class="w-full h-full max-h-[400px] max-w-[670px] md:max-w-[670px] md:max-h-[400px] lg:max-h-[550px] lg:max-w-[600px] xl:max-w-[650px] rounded-lg z-20">
+    </div>
+</div>
+</div>
+<!--MAIN CONTENT END-->
+
+
+<!--SCROLL NAV-->
+<div id="scrollNav" class="relative pattern hidden">
+  <div class="z-20 flex flex-row justify-around gap-4 border-t border-gray-200 bg-[#3A3E45] p-2.5 shadow-lg backdrop-blur-lg fixed top-14 -translate-y-1/2 left-1/2 transform -translate-x-1/2 min-h-[auto] min-w-[64px] rounded-lg border">
+
+      <a href="work.html" class="flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 text-white hover:bg-[#6B6E73]">
+          <!-- Projects -->
+          <i class="fa-solid fa-desktop"></i>
+          <small class="text-center text-xs font-medium"> Work </small>
+      </a>
+
+      <a href="contact.html" class="flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 text-white hover:bg-[#6B6E73]">
+          <!-- Contact -->
+          <i class="fa-regular fa-envelope"></i>
+          <small class="text-center text-xs font-medium"> Contact </small>
+      </a>
+
+      <a href="about.html" class="flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 text-white hover:bg-[#6B6E73]">
+          <!-- About -->
+          <i class="fa-regular fa-user"></i>
+          <small class="text-center text-xs font-medium"> About </small>
+      </a>
+
+      <!-- Vertical line -->
+      <div class="vertical-line w-px height-full bg-gray-500"></div>
+
+      <a href="index.html" class="flex h-16 w-16 flex-col items-center justify-center gap-1 rounded-md text-white hover:bg-[#6B6E73]">
+          <!-- Home -->
+          <i class="fa-solid fa-house"></i>
+          <small class="text-xs font-medium">Home</small>
+      </a>
+  </div>
+</div>
+<!--SCROLL NAV END-->
+
+<!--FOOTER-->
+<footer class="relative bottom-0 bg-[#21262E] py-8 px-4"> 
+    <div class="container mx-auto text-white">
+        <div class="flex flex-col md:flex-row items-start justify-between text-left max-w-[1400px]">
+            <!-- Logo -->
+            <div class="flex flex-col md:flex-row items-start">
+                <img src="img/logo.png" alt="Logo" class="h-20 w-20 mr-20 mb-5">
+            
+
+            <!--Contact-->
+            <div class="flex flex-col mb-10 md:mb-0">
+              <h2 class="text-white mb-1">Have any questions?</h2>
+              <p class="text-white mb-2">Feel free to contact me anytime</p>
+              <a href="contact.html" class="rounded-full py-3 px-6 font-extrabold bg-[#FEC158] text-[#21262E] text-center w-40 hover:bg-white">
+                Contact
+              </a>
+          </div>
+        </div>
+            <!-- Links and Socials list -->
+            <div class="flex w-auto justify-between">
+                <div class="links">
+                    <h2 class="block tracking-wider font-extralight text-lg pb-3 pr-28 md:pr-32 lg:pr-44 xl:pr-52 md:text-center">links</h2>
+                    <ul class="footerList">
+                        <li>
+                        <a id="ahover" href="index.html">Home</a>
+                        </li>
+                            <li>
+                            <a id="ahover" href="about.html">About</a>
+                        </li>
+                            <li>
+                            <a id="ahover" href="work.html">Work</a>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="socials">
+                    <h2 class="block tracking-wider font-extralight text-lg pb-3">socials</h2>
+                    <ul class="footerList">
+                        <li>
+                        <a id="ahover" href="https://www.linkedin.com/in/toni-hyv%C3%B6nen-bb6393256/">LinkedIn</a>
+                        </li>
+                            <li>
+                            <a id="ahover" href="https://github.com/Tonni94">Github</a>
+                            </li>
+                        <li>
+                            <a id="ahover" href="https://www.facebook.com/toni.hyvonen">Facebook</a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+  
+        <hr class="my-6 border-blueGray-300">
+  
+        <div class="footerFont flex flex-col items-center md:justify-between justify-center">
+          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+              <div class="text-white text-sm">Copyright &#169; <span id="get-current-year">2024</span>
+                  <a href="about.html" class="text-white hover:text-[#FEC158] font-montserrat">Toni Hyvönen</a>
+              </div>
+          </div>
+      </div>
+  </footer>
+  <!--FOOTER END-->
+
+<!--Scroll nav-->
+<script>
+    window.addEventListener('scroll', function() {
+    var scrollNav = document.getElementById('scrollNav');
+    if (window.scrollY > 100) { // Change 100 to your desired scroll position
+        scrollNav.classList.remove('hidden');
+    } else {
+        scrollNav.classList.add('hidden');
+    }
+});
+</script>
+
+<!--Passionate about animation-->
+<script>
+    const passionateAbout = ['Web design', 'Graphic design', 'Coding', 'Customer service', 'UI / UX Design'];
+    const passionateAboutElement = document.getElementById('passionate-about');
+    let index = 0;
+
+    function changeWord() {
+        passionateAboutElement.textContent = passionateAbout[index];
+        index = (index + 1) % passionateAbout.length;
+    }
+
+    setInterval(changeWord, 2000); // Change word every 2 seconds
+</script>
+
+
+</body>
+</html>

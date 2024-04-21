@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontpage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="mobilemenu.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+@font-face {
+  font-family: Montserrat;
+  src: url('fonts/Montserrat-Regular.ttf');
+}
+
+  @font-face {
+  font-family: Bungee;
+  src: url('fonts/Bungee-Regular.ttf');
+}
+
+h1 {
+  --primary: #FEC158;
+  font-family: 'Bungee', sans-serif;
+}
+
+h2 {
+    font-family: 'Bungee', sans-serif;
+  }
+
+h3 {
+    font-family: 'Bungee', sans-serif;
+  }
+
+a {
+  font-family: 'Montserrat';
+}  
+
+p {
+  font-family: 'Montserrat';
+}
+
+#ahover {
+  position: relative;
+}
+
+#ahover::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #FEC158;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out;
+}
+
+#ahover:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.hero-heading {
+  -webkit-text-stroke: 1px var(--primary);
+  filter: drop-shadow(0 0 0.35rem var(--primary));
+  color: transparent;
+}
+
+.skills-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes scaleHover {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.skillscard:hover {
+  animation-name: scaleHover;
+  animation-duration: 1.5s; /* Adjust the duration as needed */
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation-fill-mode: forwards;
+  background-color: #fec158 !important;
+}
+
+.skillscard:hover p {
+  color: black;
+}
+
+.footerFont {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.footerList li:nth-child(-n+2) {
+    margin-bottom: 0.5rem; /* Adjust this value as needed */
+}
+</style>
+</head>
+
+<body class="bg-[#090e17]">
+  <header class="relative bg-transparent z-30 px-4">
+    <div class="container mx-auto max-w-[1400px]">
+        <nav class="bg-transparent max-w-[1400px]">
+            <ul class="container navigation flex flex-wrap justify-between items-center text-center relative py-4">
+                <li class="logo h-full w-34">
+                    <a href="index.html">
+                        <img src="img/logo.png" class="w-16 h-16" alt="Logo">
+                    </a>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="check">
+                    <label for="check" class="open-menu z-200">
+                        <i class="fa-solid fa-bars text-white hamburger-icon text-3xl"></i>
+                    </label>
+                    <label for="check" class="close-menu z-200">
+                        <i class="fa-regular fa-circle-xmark text-white close-icon text-3xl"></i>
+                    </label>
+                    <!-- Mobile menu items -->
+                    <ul class="menu flex justify-center items-center text-center mb-1">
+                        <li class="text-lg font-semibold text-white mr-8 tracking-wide"><a href="index.html" id="ahover">Home</a></li>
+                        <li class="text-lg font-semibold text-white mr-8 tracking-wide"><a href="work.html" id="ahover">Work</a></li>
+                        <li class="text-lg font-semibold text-white mr-8 tracking-wide"><a href="contact.html" id="ahover">Contact</a></li>
+                        <li class="text-lg font-semibold text-white tracking-wide"><a href="about.html" id="ahover">About</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!--LANDING SECTION-->
+<section class="px-4 md:px-6 lg:px-10 pt-10 pb-20 md:py-40 relative" style="box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;">
+  <div class="grid grid-cols-1 md:grid-cols-2 justify-center items-center mx-auto max-w-[1300px] max-h-[800px] relative">
+      <div class="hero relative flex flex-col text-center items-center md:items-start md:text-left z-10 mt-0 pr-0 sm:pr-2">
+          <h1 class="hero-heading text-5xl tracking-wide lg:text-7xl">Hi, I'm Toni</h1>
+          <p class="text-lg text-white mb-6">A web developer & designer, based in Finland.</p>
+          <p class="text-lg text-white mb-3">Got a project on mind? Lets talk.</p>
+          <a href="contact.html" class="rounded-full py-3 px-9 font-extrabold bg-[#FEC158] text-[#21262E] text-center max-w-[150px] hover:bg-white mb-14 md:mb-0">Contact</a>
+      </div>
+      
+      <div class="bannerselfie flex justify-center items-center">
+          <img src="img/selfie.png" alt="selfie" class="z-10 ">
+        </div>
+</section>
+<!--LANDING SECTION END-->
+
+<!--WORK SECTION-->
+<section class="work bg-[#21262E] px-4 py-10 md:px-6 lg:px-10">
+  <div class="flex text-left mx-auto max-w-[1300px] mb-16 sm:mb-20 text-white text-3xl sm:text-4xl lg:text-5xl">
+    <h2 class="z-10">All creative works,<br> selected projects.</h2>
+</div>
+
+<div class="grid grid-cols-1 mx-auto max-w-[1200px]">
+  <div class="mt-0 scroll-in">
+    <a href="work.html" class="inline-block">
+      <img src="img/edit3.png" alt="Image 2" class="full transform transition-transform duration-300 hover:scale-105">
+    </a>
+    <h3 class="text-lg mt-10 text-white">Syntesia</h3>
+    <p class="text-white mb-20 sm:mb-16">Re-Branding & Web design</p>
+  </div>
+
+
+  <div class="flex flex-col justify-end items-end lg:-mt-80 work-content">
+    <a href="work.html">
+        <img src="img/edit2.png" alt="Image 1" class="full transform transition-transform duration-300 hover:scale-105">
+    </a>
+    <h3 class="text-lg mt-10 text-white text-right">Backwoods</h3>
+    <p class="text-white text-right mb-20 sm:mb-16">Branding & Web design</p>
+</div>
+
+<div class="lg:-mt-80 work-content">
+  <a href="work.html" class="inline-block">
+      <img src="img/edit.png" alt="Image 2" class="full transform transition-transform duration-300 hover:scale-105">
+  </a>
+  <h3 class="text-lg mt-10 text-white">Cheatcode</h3>
+  <p class="text-white">Branding & Web design.</p>
+</div>
+
+  </div>
+  <div class="flex text-end justify-end mx-auto max-w-[1200px] mb-6 text-white work-content">
+    <a href="work.html" id="ahover" class="flex items-center mr-4 mt-16 sm:mt-0 font-semibold text-xl"> 
+        Explore more
+    </a>
+    <i class="fa-solid fa-arrow-right flex items-center mt-16 sm:mt-0"></i>
+</div>
+</section>
+<!--WORK SECTION END-->
+
+<!--SKILLS SECTION-->
+<section class="skills px-4 py-10 md:px-6 lg:px-10 skills-section">
+  <div class="flex text-left mx-auto max-w-[1300px] mb-16 text-white text-3xl sm:text-4xl lg:text-5xl">
+    <h2 class="z-10">My skills</h2>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-center items-center max-w-[1200px] mx-auto gap-x-3 lg:gap-y-0 gap-y-3 mb-3">
+    <!-- card 1 -->
+    <div class="max-w-[360px] mx-auto w-full h-full">
+      <div class="skillscard flex rounded-lg bg-[#21262E] px-10 py-10 md:px-8 md:py-10 flex-col">
+        <div class="w-24 h-24 items-center justify-center mb-10 text-white mx-auto">
+          <img src="img/html.png" alt="HTML">
+          </div>
+            <p class="text-center text-white font-bold tracking-wider text-lg uppercase">
+              Html
+              </p>
+      </div>
+    </div>
+
+    <!-- card 2 -->
+    <div class="max-w-[360px] mx-auto w-full h-full">
+      <div class="skillscard flex rounded-lg h-full w-full bg-[#21262E] px-10 py-10 md:px-8 md:py-10 flex-col">
+        <div class="w-24 h-24 items-center justify-center mb-10 text-white mx-auto">
+          <img src="img/javascript.png" alt="Javascript">
+          </div>
+            <p class="text-center text-white font-bold tracking-wider text-lg uppercase">
+              Javascript
+              </p>
+      </div>
+    </div>
+
+    <!-- card 3 -->
+    <div class="max-w-[360px] mx-auto w-full h-full">
+      <div class="skillscard flex rounded-lg h-full w-full bg-[#21262E] px-10 py-10 md:px-8 md:py-10 flex-col">
+        <div class="w-24 h-24 items-center justify-center mb-10 text-white mx-auto">
+          <img src="img/css.png" alt="CSS">
+          </div>
+            <p class="text-center text-white font-bold tracking-wider text-lg uppercase">
+              CSS
+              </p>
+      </div>
+    </div>
+
+    <!-- card 4 --> 
+    <div class="max-w-[360px] mx-auto w-full h-full">
+      <div class="skillscard flex rounded-lg h-full w-full bg-[#21262E] px-10 py-10 md:px-8 md:py-10 flex-col">
+        <div class="w-24 h-24 items-center justify-center mb-10 text-white mx-auto">
+          <img src="img/tailwindcss.png" alt="TailwindCss">
+          </div>
+            <p class="text-center text-white font-bold tracking-wider text-lg uppercase">
+              Tailwindcss
+              </p>
+      </div>
+    </div>
+  
+    <!-- card 5 -->
+<div class="max-w-[360px] mx-auto w-full h-full lg:hidden">
+  <div class="skillscard flex rounded-lg h-full w-full bg-[#21262E] px-10 py-10 md:px-8 md:py-10 flex-col">
+    <div class="w-24 h-24 flex items-end justify-end mb-10 text-white mx-auto">
+      <img src="img/php.png" alt="PHP">
+    </div>
+    <p class="text-center text-white font-bold tracking-wider text-lg uppercase">
+      PHP
+    </p>
+  </div>
+</div>
+
+    <!-- card 6 -->
+    <div class="max-w-[360px] mx-auto w-full h-full lg:hidden">
+      <div class="skillscard flex rounded-lg h-full w-full bg-[#21262E] px-10 py-10 md:px-8 md:py-10 flex-col">
+        <div class="w-24 h-24 items-center justify-center mb-10 text-white mx-auto">
+          <img src="img/uiux.png" alt="UI/UX">
+          </div>
+            <p class="text-center text-white font-bold tracking-wider text-lg uppercase">
+              UI/UX
+              </p>
+      </div>
+    </div>
+  
+    <!-- card 7 -->
+      <div class="max-w-[360px] w-full h-full mx-auto md:mr-auto lg:hidden">
+        <div class="skillscard flex rounded-lg h-full w-full bg-[#21262E] px-10 py-10 md:px-8 md:py-10 flex-col">
+          <div class="w-24 h-24 items-center justify-center mb-10 text-white mx-auto">
+            <img src="img/webdesign.png" alt="Web Design">
+              </div>
+              <p class="text-center text-white font-bold tracking-wider text-lg uppercase">
+                Web design
+                </p>
+          </div>
+        </div>
+      
+        <!-- card 8 -->
+  <div class="max-w-[360px] w-full h-full mx-auto md:mr-auto lg:hidden">
+    <div class="skillscard flex rounded-lg h-full w-full bg-[#21262E] px-10 py-10 md:px-8 md:py-10 flex-col">
+      <div class="w-24 h-24 flex items-end justify-end mb-10 text-white mx-auto">
+        <img src="img/graphicdesign.png" alt="Graphic Design">
+      </div>
+      <p class="text-center text-white font-bold tracking-wider text-lg uppercase">
+        Graphic Design
+      </p>
+    </div>
+  </div>
+  
+      <!-- card 9 -->
+      <div class="max-w-[360px] w-full h-full mx-auto md:mr-auto lg:hidden">
+        <div class="skillscard flex rounded-lg h-full w-full bg-[#21262E] px-10 py-10 md:px-8 md:py-10 flex-col">
+          <div class="w-24 h-24 items-center justify-center mb-10 text-white mx-auto">
+            <img src="img/wordpress.png" alt="Wordpress">
+            </div>
+              <p class="text-center text-white font-bold tracking-wider text-lg uppercase">
+                WordPress
+                </p>
+        </div>
+      </div>
+  
+      <!--Filler-->
+      <div class="skillsfiller hidden md:flex"></div>
+
+      <!-- card 10 -->
+        <div class="max-w-[360px] w-full h-full mx-auto md:mr-auto lg:hidden">
+          <div class="skillscard flex rounded-lg h-full w-full bg-[#21262E] px-10 py-10 md:px-8 md:py-10 flex-col">
+            <div class="w-24 h-24 items-center justify-center mb-10 text-white mx-auto">
+              <img src="img/mysql.png" alt="MySQL">
+              </div>
+              <p class="text-center text-white font-bold tracking-wider text-lg uppercase">
+                 mysql
+              </p>
+          </div>
+        </div>  
+    </div>
+<!--Second row of grid-->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 max-w-[900px] mx-auto gap-x-3 gap-y-3 mb-3 lg:flex hidden">
+      
+  <!-- card 5 -->
+<div class="lg:flex max-w-[360px] justify-end items-end w-full h-full mx-auto md:ml-auto">
+  <div class="skillscard flex rounded-lg h-full w-full bg-[#21262E] px-10 py-10 md:px-8 md:py-10 flex-col">
+    <div class="w-24 h-24 flex items-end justify-end mb-10 text-white mx-auto">
+      <img src="img/php.png" alt="PHP">
+    </div>
+    <p class="text-center text-white font-bold tracking-wider text-lg uppercase">
+      PHP
+    </p>
+  </div>
+</div>
+
+    <!-- card 6 -->
+    <div class="lg:flex max-w-[360px] mx-auto w-full h-full">
+      <div class="skillscard flex rounded-lg h-full w-full bg-[#21262E] px-10 py-10 md:px-8 md:py-10 flex-col">
+        <div class="w-24 h-24 items-center justify-center mb-10 text-white mx-auto">
+          <img src="img/uiux.png" alt="UI/UX">
+          </div>
+            <p class="text-center text-white font-bold tracking-wider text-lg uppercase">
+              UI/UX Design
+              </p>
+      </div>
+    </div>
+
+    <!-- card 7 -->
+    <div class="lg:flex max-w-[360px] w-full h-full mx-auto md:mr-auto">
+      <div class="skillscard flex rounded-lg h-full w-full bg-[#21262E] px-10 py-10 md:px-8 md:py-10 flex-col">
+        <div class="w-24 h-24 items-center justify-center mb-10 text-white mx-auto">
+          <img src="img/webdesign.png" alt="Web Design">
+          </div>
+            <p class="text-center text-white font-bold tracking-wider text-lg uppercase">
+              Web design
+              </p>
+      </div>
+    </div>
+  </div>
+
+  <!--Third row of grid-->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 max-w-[900px] mx-auto gap-x-3 gap-y-3 lg:flex hidden">
+
+    <!-- card 8 -->
+  <div class="max-w-[360px] justify-end items-end w-full h-full mx-auto md:ml-auto">
+    <div class="skillscard flex rounded-lg h-full w-full bg-[#21262E] px-10 py-10 md:px-8 md:py-10 flex-col">
+      <div class="w-24 h-24 flex items-end justify-end mb-10 text-white mx-auto">
+        <img src="img/graphicdesign.png" alt="Graphic Design">
+      </div>
+      <p class="text-center text-white font-bold tracking-wider text-lg uppercase">
+        Graphic Design
+      </p>
+    </div>
+  </div>
+  
+      <!-- card 9 -->
+      <div class="max-w-[360px] mx-auto w-full h-full">
+        <div class="skillscard flex rounded-lg h-full w-full bg-[#21262E] px-10 py-10 md:px-8 md:py-10 flex-col">
+          <div class="w-24 h-24 items-center justify-center mb-10 text-white mx-auto">
+            <img src="img/wordpress.png" alt="Wordpress">
+            </div>
+              <p class="text-center text-white font-bold tracking-wider text-lg uppercase">
+                WordPress
+                </p>
+        </div>
+      </div>
+  
+      <!-- card 10 -->
+      <div class="max-w-[360px] w-full h-full lg:mr-auto mx-auto">
+        <div class="skillscard flex rounded-lg h-full w-full bg-[#21262E] px-10 py-10 md:px-8 md:py-10 flex-col">
+          <div class="w-24 h-24 items-center justify-center mb-10 text-white mx-auto">
+            <img src="img/mysql.png" alt="MySQL">
+            </div>
+              <p class="text-center text-white font-bold tracking-wider text-lg uppercase">
+                mysql
+                </p>
+        </div>
+      </div>
+    </div>
+</section>
+<!--SKILLS SECTION END-->
+
+<!--SCROLL NAV-->
+<div id="scrollNav" class="relative hidden">
+  <div class="z-20 flex flex-row justify-around gap-4 border-t border-gray-200 bg-[#3A3E45] p-2.5 shadow-lg backdrop-blur-lg fixed top-14 -translate-y-1/2 left-1/2 transform -translate-x-1/2 min-h-[auto] min-w-[64px] rounded-lg border">
+
+      <a href="work.html" class="flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 text-white hover:bg-[#6B6E73]">
+          <!-- Projects -->
+          <i class="fa-solid fa-desktop"></i>
+          <small class="text-center text-xs font-medium"> Work </small>
+      </a>
+
+      <a href="contact.html" class="flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 text-white hover:bg-[#6B6E73]">
+          <!-- Contact -->
+          <i class="fa-regular fa-envelope"></i>
+          <small class="text-center text-xs font-medium"> Contact </small>
+      </a>
+
+      <a href="about.html" class="flex aspect-square min-h-[32px] w-16 flex-col items-center justify-center gap-1 rounded-md p-1.5 text-white hover:bg-[#6B6E73]">
+          <!-- About -->
+          <i class="fa-regular fa-user"></i>
+          <small class="text-center text-xs font-medium"> About </small>
+      </a>
+
+      <!-- Vertical line -->
+      <div class="vertical-line w-px height-full bg-gray-500"></div>
+
+      <a href="index.html" class="flex h-16 w-16 flex-col items-center justify-center gap-1 rounded-md text-white hover:bg-[#6B6E73]">
+          <!-- Home -->
+          <i class="fa-solid fa-house"></i>
+          <small class="text-xs font-medium">Home</small>
+      </a>
+  </div>
+</div>
+<!--SCROLL NAV END-->
+
+<!--FOOTER-->
+<footer class="relative bottom-0 bg-[#21262E] py-8 px-4"> 
+  <div class="container mx-auto text-white">
+      <div class="flex flex-col md:flex-row items-start justify-between text-left max-w-[1400px]">
+          <!-- Logo -->
+          <div class="flex flex-col md:flex-row items-start">
+              <img src="img/logo.png" alt="Logo" class="h-20 w-20 mr-20 mb-5">
+          
+
+          <!--Contact-->
+          <div class="flex flex-col mb-10 md:mb-0">
+            <h2 class="text-white mb-1">Have any questions?</h2>
+            <p class="text-white mb-2">Feel free to contact me anytime</p>
+            <a href="contact.html" class="rounded-full py-3 px-6 font-extrabold bg-[#FEC158] text-[#21262E] text-center w-40 hover:bg-white">
+              Contact
+            </a>
+        </div>
+      </div>
+          <!-- Links and Socials list -->
+          <div class="flex w-auto justify-between">
+              <div class="links">
+                  <h2 class="block tracking-wider font-extralight text-lg mb-3 pr-28 md:pr-32 lg:pr-44 xl:pr-52 md:text-center">links</h2>
+                  <ul class="footerList">
+                    <li>
+                      <a id="ahover" href="index.html">Home</a>
+                  </li>
+                          <li>
+                              <a id="ahover" href="about.html">About</a>
+                          </li>
+                          <li>
+                              <a id="ahover" href="work.html">Work</a>
+                          </li>
+                      </ul>
+                  </div>
+                  <div class="socials">
+                  <h2 class="block tracking-wider font-extralight text-lg mb-3">socials</h2>
+                  <ul class="footerList">
+                          <li>
+                              <a id="ahover" href="https://www.linkedin.com/in/toni-hyv%C3%B6nen-bb6393256/">LinkedIn</a>
+                          </li>
+                          <li>
+                              <a id="ahover" href="https://github.com/Tonni94">Github</a>
+                          </li>
+                          <li>
+                              <a id="ahover" href="https://www.facebook.com/toni.hyvonen">Facebook</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <hr class="my-6 border-blueGray-300">
+      <div class="footerFont flex flex-col items-center md:justify-between justify-center">
+        <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+            <div class="text-white text-sm">Copyright &#169; <span id="get-current-year">2024</span>
+                <a href="about.html" class="text-white hover:text-[#FEC158] font-montserrat">Toni Hyvönen</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--FOOTER END-->
+
+
+<!--SCRIPTS-->
+<!--Scroll nav-->
+<script>
+    window.addEventListener('scroll', function() {
+    var scrollNav = document.getElementById('scrollNav');
+    if (window.scrollY > 100) { // Change 100 to your desired scroll position
+        scrollNav.classList.remove('hidden');
+    } else {
+        scrollNav.classList.add('hidden');
+    }
+});
+</script>
+</body>
+</html>
